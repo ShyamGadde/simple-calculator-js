@@ -26,3 +26,10 @@ body {
   text-align: right;
   padding: 20px 5px;
 }
+
+.calc-button-row {
+  display: flex;
+  align-content: stretch;
+  justify-content: space-between;
+  margin-bottom: 0.5%;
+}
