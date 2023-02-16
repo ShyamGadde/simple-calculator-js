@@ -61,3 +61,19 @@ body {
   background-color: #df974c;
   color: white;
 }
+
+.calc-button:hover {
+  background-color: #ebebeb;
+}
+
+.calc-button:active {
+  background-color: #bbbcbe;
+}
+
+.calc-button:last-child:active {
+  background-color: #dd8d37;
+}
+
+.calc-button:last-child:hover {
+  background-color: #dfb07e;
+}
