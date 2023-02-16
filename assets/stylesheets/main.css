@@ -9,9 +9,11 @@ html {
 }
 
 body {
-  padding: 0;
   margin: 0;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #74ebd5;
   background-image: -webkit-linear-gradient(90deg, #74ebd5 0%, #9face6 100%);
   background-image: -moz-linear-gradient(90deg, #74ebd5 0%, #9face6 100%);
@@ -82,19 +84,19 @@ body {
 
 .abs-center {
   height: 95%;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 footer {
+  background-color: darkgrey;
   margin: 0;
-  padding: 0;
-  position: absolute;
-  bottom: 0;
 }
 
-footer a {
-  color: gray;
+.attribution {
+  color: white;
   text-decoration: none;
+  font-variant: small-caps;
 }
