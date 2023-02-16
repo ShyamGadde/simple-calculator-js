@@ -17,6 +17,7 @@ body {
   width: 400px;
   background-color: black;
   color: white;
+  box-shadow: 0 0 1000px 500px gray;
 }
 
 .screen {
