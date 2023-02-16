@@ -12,9 +12,6 @@ body {
   padding: 0;
   margin: 0;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .wrapper {
@@ -76,4 +73,11 @@ body {
 
 .calc-button:last-child:hover {
   background-color: #dfb07e;
+}
+
+.abs-center {
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
