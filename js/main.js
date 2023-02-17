@@ -17,10 +17,8 @@ function handleSymbol(symbol) {
       break;
 
     case '=':
-      if (previousOperator === null) {
-        // you need two numbers to do math
-        return
-      }
+      // You need two numbers to do math
+      if (previousOperator === null) return;
       flushOperation(+buffer);
       previousOperator = null;
       buffer = runningTotal;
@@ -69,11 +67,8 @@ function handleMath(symbol) {
 }
 
 function handleNumber(numberString) {
-  if (buffer === "0") {
-    buffer = numberString;
-  } else {
-    buffer += numberString;
-  }
+  if (buffer === "0") buffer = numberString;
+  else buffer += numberString;
 };
 
 function init() {
