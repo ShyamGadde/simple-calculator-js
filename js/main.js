@@ -32,7 +32,8 @@ function handleSymbol(symbol) {
       break
 
     case '←':
-      
+      let len = buffer.length;
+      buffer = (len === 1) ? '0' : buffer.substring(0, len - 1);
       break;
     
     case '+':
