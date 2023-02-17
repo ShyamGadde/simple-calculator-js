@@ -26,11 +26,23 @@ body {
 
 .screen {
   color: white;
-  font-size: 40px;
+  font-size: 45px;
   font-family: "Courier New", Courier, monospace;
   text-align: right;
-  padding: 20px 5px;
+  padding: 20px 10px;
   background-color: black;
+}
+
+#buffer,
+#expression {
+  padding: 0;
+  margin: 0;
+}
+
+#expression {
+  font-size: 25px;
+  margin-bottom: 1rem;
+  color: #bbbcbe;
 }
 
 .calc-button-row {

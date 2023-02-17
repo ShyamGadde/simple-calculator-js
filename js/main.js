@@ -2,25 +2,30 @@ let runningTotal = 0;
 let buffer = "0";
 let previousOperator = null;
 
-const screen = document.querySelector(".screen");
+const screenBuffer = document.querySelector("#buffer");
+const screenExpression = document.querySelector("#expression");
 
 function buttonClick(value) {
   isNaN(value) ? handleSymbol(value) : handleNumber(value);
-  screen.innerText = buffer;
+  screenBuffer.innerText = buffer;
 }
 
 function handleSymbol(symbol) {
   switch (symbol) {
     case 'C':
       buffer = '0';
+      screenExpression.innerText = '';
       runningTotal = 0;
+      previousOperator = null;
       break;
 
     case '=':
       // You need two numbers to do math
-      if (previousOperator === null) return;
+      if (previousOperator === null || previousOperator === '=') return;
+
+      screenExpression.innerText += buffer;
       flushOperation(+buffer);
-      previousOperator = null;
+      previousOperator = '=';
       buffer = runningTotal;
       runningTotal = 0;
       break
@@ -54,6 +59,7 @@ function handleMath(symbol) {
   if (buffer === '0') return;
 
   const intBuffer = +buffer;
+  screenExpression.innerText += (previousOperator === '=') ? symbol : intBuffer + symbol;
 
   if (runningTotal === 0) {
     runningTotal = intBuffer;
