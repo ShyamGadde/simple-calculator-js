@@ -5,11 +5,7 @@ let previousOperator = null;
 const screen = document.querySelector(".screen");
 
 function buttonClick(value) {
-  if (isNaN(value)) {
-    handleSymbol(value);
-  } else {
-    handleNumber(value);
-  }
+  isNaN(value) ? handleSymbol(value) : handleNumber(value);
   screen.innerText = buffer;
 }
 
