@@ -59,7 +59,8 @@ function handleMath(symbol) {
   if (buffer === '0') return;
 
   const intBuffer = +buffer;
-  screenExpression.innerText += (previousOperator === '=') ? symbol : intBuffer + symbol;
+  if (previousOperator === '=') screenExpression.innerText = buffer + symbol;
+  else screenExpression.innerText += intBuffer + symbol;
 
   if (runningTotal === 0) {
     runningTotal = intBuffer;
